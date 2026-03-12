@@ -1,105 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Styles | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Header -->
-  <header class="gradient-bg">
-    <div class="container">
-      <h1>My Portfolio</h1>
-      <p>Showcasing my projects and skills</p>
-      <button class="btn">Contact Me</button>
-    </div>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Alex Styles</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section>
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I’m a web developer passionate about creating clean, responsive, and engaging user experiences.
-      </p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Hello, I'm Alex Styles</h2>
+    <p>Creative Designer & Front-End Developer</p>
+    <a href="#projects" class="btn">View My Work</a>
   </section>
 
-  <!-- Portfolio Section -->
-  <section>
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid grid-3">
-        <!-- Card 1 -->
-        <div class="card tooltip" data-tip="Click to learn more">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>Project One</h3>
-          <p>A responsive website built with HTML, CSS, and JavaScript.</p>
-          <button class="btn" onclick="openModal('modal1')">View Details</button>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate designer focused on creating clean, user-friendly,
+      and responsive websites. I enjoy turning ideas into visually appealing
+      digital experiences.
+    </p>
+  </section>
 
-        <!-- Card 2 -->
-        <div class="card tooltip" data-tip="Click to learn more">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Project Two</h3>
-          <p>An interactive dashboard using modern web technologies.</p>
-          <button class="btn" onclick="openModal('modal2')">View Details</button>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card tooltip" data-tip="Click to learn more">
-          <img src="project3.jpg" alt="Project 3">
-          <h3>Project Three</h3>
-          <p>A mobile-first application with smooth UI/UX features.</p>
-          <button class="btn" onclick="openModal('modal3')">View Details</button>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern responsive personal portfolio website.</p>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>A clean landing page design for a startup.</p>
+      </div>
+      <div class="project-card">
+        <h3>UI Redesign</h3>
+        <p>Redesigned a website UI for better user experience.</p>
       </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Responsive Design</li>
+      <li>UI/UX Design</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: alex.styles@example.com</p>
+  </section>
+
   <!-- Footer -->
-  <footer class="gradient-bg">
-    <div class="container">
-      <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>© 2026 Alex Styles. All rights reserved.</p>
   </footer>
-
-  <!-- Modals -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h2>Project One Details</h2>
-      <p>This project demonstrates responsive design principles and clean layout structure.</p>
-      <button class="btn" onclick="closeModal('modal1')">Close</button>
-    </div>
-  </div>
-
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <h2>Project Two Details</h2>
-      <p>This dashboard integrates charts and interactive elements for data visualization.</p>
-      <button class="btn" onclick="closeModal('modal2')">Close</button>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal">
-    <div class="modal-content">
-      <h2>Project Three Details</h2>
-      <p>This mobile-first app focuses on accessibility and smooth user interactions.</p>
-      <button class="btn" onclick="closeModal('modal3')">Close</button>
-    </div>
-  </div>
-
-  <!-- JavaScript for Modals -->
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-  </script>
 
 </body>
 </html>
