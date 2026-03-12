@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="gradient-bg">
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <p>Showcasing my projects and skills</p>
+      <button class="btn">Contact Me</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a web developer passionate about creating clean, responsive, and engaging user experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid grid-3">
+        <!-- Card 1 -->
+        <div class="card tooltip" data-tip="Click to learn more">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Project One</h3>
+          <p>A responsive website built with HTML, CSS, and JavaScript.</p>
+          <button class="btn" onclick="openModal('modal1')">View Details</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card tooltip" data-tip="Click to learn more">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>Project Two</h3>
+          <p>An interactive dashboard using modern web technologies.</p>
+          <button class="btn" onclick="openModal('modal2')">View Details</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card tooltip" data-tip="Click to learn more">
+          <img src="project3.jpg" alt="Project 3">
+          <h3>Project Three</h3>
+          <p>A mobile-first application with smooth UI/UX features.</p>
+          <button class="btn" onclick="openModal('modal3')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient-bg">
+    <div class="container">
+      <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h2>Project One Details</h2>
+      <p>This project demonstrates responsive design principles and clean layout structure.</p>
+      <button class="btn" onclick="closeModal('modal1')">Close</button>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h2>Project Two Details</h2>
+      <p>This dashboard integrates charts and interactive elements for data visualization.</p>
+      <button class="btn" onclick="closeModal('modal2')">Close</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h2>Project Three Details</h2>
+      <p>This mobile-first app focuses on accessibility and smooth user interactions.</p>
+      <button class="btn" onclick="closeModal('modal3')">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modals -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
